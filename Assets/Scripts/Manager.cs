@@ -335,6 +335,8 @@ public class Manager : MonoBehaviour
 
         Desk validDesk = desks[set];
         validDesk.Generate();
+
+        Debug.Log("Start Game");
     }
     public void FinishGame()
     {
@@ -359,6 +361,8 @@ public class Manager : MonoBehaviour
             endTimerObj.SetActive(true);
         else if (mode == 1)
             endScoreObj.SetActive(true);
+
+        Debug.Log("End Game");
 
         background.sprite = endBG;
         timer.text = Mathf.RoundToInt(finalTime).ToString();
