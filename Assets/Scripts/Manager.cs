@@ -76,6 +76,8 @@ public class Manager : MonoBehaviour
     public bool fullscreen;
     void Start()
     {
+        Application.targetFrameRate = 60;
+        
         Save save = SaveSystem.Load();
 
         if(save != null)
